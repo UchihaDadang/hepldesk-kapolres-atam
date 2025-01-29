@@ -24,11 +24,11 @@ export default function Home() {
                             </div>
                             <div className="w-100 h-100 m-0 pt-3">
                             <ul className="list-unstyled text-start m-0 p-0">
-                                    <li>: 09876</li>
-                                    <li>: T Mahdalena</li>
-                                    <li>: Lena123@gmail.com</li>
-                                    <li>: Teknik Informatika</li>
-                                    <li>: STILKES Cut Nyak Dien Langsa</li>
+                                    <li>: 2011033</li>
+                                    <li>: T Magdalena</li>
+                                    <li>: tmagdalena1409@gmail.com</li>
+                                    <li>: Teknik Komputer</li>
+                                    <li>: Sains Cut Nyak Dien Langsa</li>
                                 </ul>
                             </div>
                         </div>
