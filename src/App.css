@@ -1,0 +1,289 @@
+:root {
+  --primary-bg: bisque;
+  --secondary-bg: #FFFFF0;
+  --border-color: white;
+  --text-color: black;
+  --transition-speed: 0.3s;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.8rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.sidebar-left {
+  width: 25%;
+  background-color: var(--primary-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-right {
+  flex: 1;
+  background-color: var(--secondary-bg);
+  min-height: 100vh;
+  padding: var(--spacing-lg);
+}
+
+
+.logo {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--spacing-sm);
+}
+
+
+.navbar {
+  display: block;
+  flex-direction: column;
+  height: calc(100vh - 5rem);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list-items {
+  flex: 1;
+}
+
+.kategori {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: 500;
+}
+
+.navbar-items {
+  list-style: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.list-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--border-color);
+  transition: width var(--transition-speed) ease;
+}
+
+.list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.list-item:hover::after {
+  width: 100%;
+}
+
+
+.bi {
+  margin-right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+}
+
+
+.bottom-nav {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.bottom-nav {
+  margin-top: auto; 
+  padding: 1rem;
+  border-top: 1px solid white;
+}
+
+.navbar-minimized {
+  width: 80px;
+}
+
+
+.navbar-minimized .list-item span {
+  display: none;
+}
+
+.navbar-minimized .kategori {
+  display: none;
+}
+
+
+.logout-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: azure;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-button i {
+  margin-right: 0.5rem;
+}
+
+
+.list-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: chocolate;
+}
+
+.list-item.active::after {
+  width: 100%;
+}
+
+.list-item.active .list {
+  font-weight: 500;
+}
+
+.list-item.active .bi {
+  color: chocolate;
+}
+
+.not-found {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  z-index: 9999;
+}
+
+.not-found h1 {
+  margin-bottom: 20px;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+}
+
+.btn-minimize {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  font-size: 2rem;
+  color: chocolate;
+  background-color: transparent; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-minimize:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: black; 
+  border-color: black; 
+}
+
+.modal-header {
+  height: 5rem;
+  border-bottom: 1px solid bisque;
+  justify-content: space-between;
+}
+
+.profile {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: bisque;
+}
+
+.home-page {
+  height: 100vh;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 35.6rem;
+}
+
+.foto {
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-bg);
+}
+
+.profile-bio {
+  width: 50%;
+}
+
+.wraper-bio {
+  width: 60%;
+  background-color: bisque;
+}
+
+.text-justify-custom {
+  text-align: justify;
+}
+
+.wrap-note-bio {
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .sidebar-left {
+    width: 100%;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
+  
+  .list-item {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+}
